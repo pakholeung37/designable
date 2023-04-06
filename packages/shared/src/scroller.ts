@@ -1,4 +1,4 @@
-import { IPoint } from './coordinate'
+import { IPoint, Rect } from './coordinate'
 import { createUniformSpeedAnimation, calcSpeedFactor } from './animation'
 import { isFn, isWindow } from './types'
 
@@ -15,7 +15,7 @@ export interface IAutoScrollBasicInfo {
 export const calcAutoScrollBasicInfo = (
   point: IPoint,
   axis: 'x' | 'y',
-  viewport: DOMRect,
+  viewport: Rect,
   maxSpeed = MAX_SPEED
 ): IAutoScrollBasicInfo | null => {
   const { left, right, top, bottom } = viewport
